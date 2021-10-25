@@ -7,7 +7,7 @@ const sumNumbersOrBigints = (previous, current) => (
     : previous + current);
 
 const summarize = (...numbers) => numbers.reduce(
-  (previous, current) => (Number.isInteger(current)
+  (previous, current) => (Number(current)
     ? sumNumbersOrBigints(previous, current)
     : previous),
   0,
